@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.alexlm78'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'com.oracle.database.jdbc', name: 'ojdbc10', version: '19.10.0.0'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.4.4'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClass = 'com.alexlm78.allarmi.Allarmi'
+}
